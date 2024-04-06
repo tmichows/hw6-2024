@@ -1,3 +1,5 @@
+//Github Link: https://tmichows.github.io/hw6-2024/video
+
 var video;
 
 //Page Loading
