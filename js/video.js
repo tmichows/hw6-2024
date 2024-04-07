@@ -41,7 +41,15 @@ document.querySelector("#faster").addEventListener("click", function(){
 
 //Skip Ahead
 document.querySelector("#skip").addEventListener("click", function(){
-
+  	console.log("The current video time is " + video.currentTime);
+	skip = video.currentTime + 10;
+	
+	if(skip > video.duration){
+		video.currentTime = 0;
+	}
+	else{
+		video.currentTime = skip;
+	}
 });
 
 //Mute
