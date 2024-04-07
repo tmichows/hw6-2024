@@ -18,7 +18,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	video.play();
 	var slider = document.querySelector("#slider");
 	//console.log(slider.value)
-	document.querySelector("#volume").innerText = 100;
+	document.querySelector("#volume").innerText = "100%";
 });
 
 //Pause Button
@@ -60,17 +60,17 @@ document.querySelector("#mute").addEventListener("click", function(){
 document.querySelector("#slider").addEventListener("input", function(){
 	var slider = document.querySelector("#slider");
 	//console.log(slider.value)
-	document.querySelector("#volume").innerText = slider.value;
+	document.querySelector("#volume").innerText = slider.value +"%";
 });
 
 //Styled
 document.querySelector("#vintage").addEventListener("click", function(){
-	var video_element = document.querySelector("#player1")
+	var video_element = document.querySelector("video")
 	video_element.classList.toggle("oldSchool");
 });
 
 //Original
 document.querySelector("#orig").addEventListener("click", function(){
-	var video_element = document.querySelector("#player1")
+	var video_element = document.querySelector("video")
 	video_element.classList.toggle("oldSchool");
 });
