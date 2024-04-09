@@ -67,18 +67,18 @@ document.querySelector("#mute").addEventListener("click", function(){
 //Volume Slider
 document.querySelector("#slider").addEventListener("input", function(){
 	var slider = document.querySelector("#slider");
-	//console.log(slider.value)
 	document.querySelector("#volume").innerText = slider.value +"%";
+	video.volume = slider.value/100; 
 });
 
 //Styled
 document.querySelector("#vintage").addEventListener("click", function(){
-	var video_element = document.querySelector("video")
-	video_element.classList.toggle("oldSchool");
+	var video_element = document.querySelector("#player1")
+	video_element.classList.add("oldSchool");
 });
 
 //Original
 document.querySelector("#orig").addEventListener("click", function(){
-	var video_element = document.querySelector("video")
-	video_element.classList.toggle("oldSchool");
+	var video_element = document.querySelector("#player1")
+	video_element.classList.remove("oldSchool");
 });
