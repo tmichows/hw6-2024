@@ -18,7 +18,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	video.play();
 	var slider = document.querySelector("#slider");
 	//console.log(slider.value)
-	document.querySelector("#volume").innerText = "100%";
+	document.querySelector("#volume").innerText = video.volume * 100 + "%";
 });
 
 //Pause Button
@@ -67,8 +67,8 @@ document.querySelector("#mute").addEventListener("click", function(){
 //Volume Slider
 document.querySelector("#slider").addEventListener("input", function(){
 	var slider = document.querySelector("#slider");
-	document.querySelector("#volume").innerText = slider.value +"%";
 	video.volume = slider.value/100; 
+	document.querySelector("#volume").innerText = slider.value +"%";
 });
 
 //Styled
